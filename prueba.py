@@ -10,3 +10,7 @@ Y= np.random.randn(50)
 plt.scatter(X,Y,color="r")
 plt.title("Grafica de puntos")
 plt.show()
+
+# prueba prueba#
+print("hola")
+print("hola de nuevo")
