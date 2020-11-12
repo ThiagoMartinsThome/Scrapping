@@ -5,27 +5,32 @@ import seaborn as sns
 
 def color_grafica():
     # pregunto usuario color grafica
-    pregunta = input("que color quieres usar: r,b,o,g?")
+    pregunta = input("que color quieres usar: r, b, o, g: ")
 
 
     # creo una simple grafica de prueba
-    X= np.random.randn(50)
-    Y= np.random.randn(50)
+    x = np.random.randn(50)
+    y = np.random.randn(50)
 
-    plt.scatter(X,Y,color=pregunta)
+    plt.scatter(x, y, color=pregunta)
+
+    # creo una regression lineal en base al scatter plot
+    s, i = np.polyfit(x, y, 1) # s = slope, i = intercept
+    plt.plot(x, s*x + i)
+
     plt.title("Grafica de puntos")
     plt.show()
 
-#pregunto de nuevo
-pregunta_fin = input("quieres ver la grafica Y/N")
+# pregunto de nuevo
+pregunta_fin = input("Quieres ver la grafica Y/N: ")
 try:
     if pregunta_fin == "Y":
         color_grafica()
     elif pregunta_fin == "N":
-        print ("gracias por usar el programma")
+        print("Gracias por usar el programma")
 except:
         print("An exception occurred")
 
-# Hola Lalo#####
+
 
 # nuevo cambio"
